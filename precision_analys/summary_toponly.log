@@ -1,0 +1,12 @@
+node_name,	  log_0:min,	log_0:avg,	log_1:min,	log_1:avg,	log_2:min,	log_2:avg,	log_3:min,	log_3:avg,	log_4:min,	log_4:avg,	log_5:min,	log_5:avg,	log_6:min,	log_6:avg,	log_7:min,	log_7:avg,	log_8:min,	log_8:avg,	log_9:min,	log_9:avg,	
+ac4dec,	33.7,	68.9,	34.1,	69.3,	34.6,	68.9,	33.8,	69.2,	34.9,	69.3,	34.2,	68.9,	34.4,	68.3,	34.7,	69.1,	34.1,	68.6,	34.0,	68.9,	
+log_0 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_0.log
+log_1 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_1.log
+log_2 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_2.log
+log_3 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_3.log
+log_4 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_4.log
+log_5 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_5.log
+log_6 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_6.log
+log_7 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_7.log
+log_8 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_8.log
+log_9 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_toplevel_only_ref_20150908-22-53-31/test_em_001_200_b48_f13_aspx_acpl1_dap_on_9.log

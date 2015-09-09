@@ -1,0 +1,26 @@
+<devices>
+    <device name="linux_pandaboard_cortex_a9">
+        <address>root@10.204.5.116</address>
+        <access_type>ssh</access_type>
+        <work_dir>~/ipaf_tmp/</work_dir>
+        <pre_argv>taskset 0x01</pre_argv>
+        <if_lock_cpufreq>no</if_lock_cpufreq>
+        <locked_cpufreq_MHz></locked_cpufreq_MHz>
+    </device>
+    <device name="android_nexus10_cortex_a15">
+        <address>R32D203NACR</address>
+        <access_type>adb</access_type>
+        <work_dir>/data/local/tmp/ipaf_tmp/</work_dir>
+        <pre_argv></pre_argv>
+        <if_lock_cpufreq>yes</if_lock_cpufreq>
+        <locked_cpufreq_MHz>800</locked_cpufreq_MHz>
+    </device>
+    <device name="android_yoga_tablet2_atom_Z3745">
+        <address>BaytrailE6FC5F57</address>
+        <access_type>adb</access_type>
+        <work_dir>/data/local/tmp/ipaf_tmp/</work_dir>
+        <pre_argv>taskset 0x02</pre_argv>
+        <if_lock_cpufreq>yes</if_lock_cpufreq>
+        <locked_cpufreq_MHz>1330</locked_cpufreq_MHz>
+    </device>
+</devices>

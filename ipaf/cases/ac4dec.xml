@@ -1,0 +1,12 @@
+<cases>
+    <!-- io2ch --> 
+    <case id="ac4_001">
+        <inputs>
+            <input>ac4dec_signals/001.ac4</input>
+        </inputs>
+        <cmdline>-if 001.ac4 -of out.wav -out_ref_lev -14 -dap_enable 1 -drc_enable 1 -out_single_inst 1</cmdline>
+        <root_node>ac4dec</root_node>
+        <mcps_norm_coeff>48000/1536/1e6</mcps_norm_coeff>
+        <description>case 0011</description>
+    </case>
+</cases>

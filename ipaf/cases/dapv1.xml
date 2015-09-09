@@ -1,0 +1,11 @@
+<cases>
+    <case id="dapv1_test">
+        <inputs>
+            <input>dapv1_signals/null.wav</input>
+        </inputs>
+        <cmdline>dapv1_test command line here</cmdline>
+        <root_node>ak</root_node>
+        <mcps_norm_coeff>48000/256/1e6</mcps_norm_coeff>
+        <description>dapv1_test description here</description>
+    </case>
+</cases>

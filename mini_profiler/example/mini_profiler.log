@@ -1,0 +1,70 @@
++ Node Name        : profiled_float
+| Total            : 9776801 cycles
+| Max  : 9776801 cycles
+| Min  : 9776801 cycles
+| Avg  : 9776801 cycles
+| Number of Calls             : 1
+|
+|	+ Node Name        : malloc
+|	| Total            : 8585 cycles
+|	| Max  : 474 cycles
+|	| Min  : 13 cycles
+|	| Avg  : 17 cycles
+|	| Number of Calls             : 500
+|	|
+|	+ Node Name        : init
+|	| Total            : 2815756 cycles
+|	| Max  : 12111 cycles
+|	| Min  : 5546 cycles
+|	| Avg  : 5632 cycles
+|	| Number of Calls             : 500
+|	|
+|	+ Node Name        : add_float
+|	| Total            : 3761033 cycles
+|	| Max  : 17534 cycles
+|	| Min  : 7424 cycles
+|	| Avg  : 7522 cycles
+|	| Number of Calls             : 500
+|	|
+|	+ Node Name        : mul_float
+|	| Total            : 3183604 cycles
+|	| Max  : 15472 cycles
+|	| Min  : 6205 cycles
+|	| Avg  : 6367 cycles
+|	| Number of Calls             : 500
+|	|
++ Node Name        : profiled_double
+| Total            : 15015733 cycles
+| Max  : 15015733 cycles
+| Min  : 15015733 cycles
+| Avg  : 15015733 cycles
+| Number of Calls             : 1
+|
+|	+ Node Name        : malloc
+|	| Total            : 145045 cycles
+|	| Max  : 666 cycles
+|	| Min  : 277 cycles
+|	| Avg  : 290 cycles
+|	| Number of Calls             : 500
+|	|
+|	+ Node Name        : init
+|	| Total            : 4596199 cycles
+|	| Max  : 15325 cycles
+|	| Min  : 8874 cycles
+|	| Avg  : 9192 cycles
+|	| Number of Calls             : 500
+|	|
+|	+ Node Name        : add_double
+|	| Total            : 5085936 cycles
+|	| Max  : 17136 cycles
+|	| Min  : 10015 cycles
+|	| Avg  : 10172 cycles
+|	| Number of Calls             : 500
+|	|
+|	+ Node Name        : mul_double
+|	| Total            : 4966362 cycles
+|	| Max  : 19718 cycles
+|	| Min  : 9762 cycles
+|	| Avg  : 9933 cycles
+|	| Number of Calls             : 500
+|	|

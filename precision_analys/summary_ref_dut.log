@@ -1,0 +1,27 @@
+node_name,	  log_0:min,	log_0:avg,	log_1:min,	log_1:avg,	log_2:min,	log_2:avg,	log_3:min,	log_3:avg,	log_4:min,	log_4:avg,	log_5:min,	log_5:avg,	log_6:min,	log_6:avg,	log_7:min,	log_7:avg,	log_8:min,	log_8:avg,	log_9:min,	log_9:avg,	
+ac4dap_process,	25.8,	29.3,	25.5,	29.2,	25.5,	29.0,	25.6,	29.1,	25.7,	29.2,	25.7,	29.2,	25.6,	29.2,	25.8,	29.3,	25.6,	29.1,	25.6,	29.1,	
+ac4dap_process,	25.4,	29.0,	25.5,	29.0,	25.5,	28.9,	25.4,	29.1,	25.5,	29.1,	25.4,	28.9,	25.5,	29.4,	25.3,	28.7,	25.6,	29.1,	25.4,	29.1,	
+ac4dec,	35.4,	71.7,	35.0,	71.8,	35.1,	71.6,	35.2,	71.9,	35.5,	71.9,	34.9,	71.8,	35.5,	71.8,	35.3,	72.9,	35.2,	71.8,	34.6,	71.3,	
+ac4dec,	34.3,	70.5,	34.7,	70.5,	34.2,	70.0,	34.9,	71.0,	34.4,	70.3,	34.3,	70.1,	34.8,	71.3,	34.5,	70.2,	34.2,	70.1,	34.6,	70.6,	
+ac4dec_input_stage_process,	17.7,	20.4,	17.5,	20.4,	17.6,	20.4,	17.6,	20.6,	17.7,	20.5,	17.5,	20.3,	17.7,	20.5,	17.7,	21.1,	17.6,	20.5,	17.3,	20.2,	
+ac4dec_input_stage_process,	17.1,	20.1,	17.3,	20.1,	17.1,	19.8,	17.5,	20.3,	17.2,	19.9,	17.1,	19.9,	17.4,	20.3,	17.2,	20.0,	17.1,	19.9,	17.3,	20.0,	
+ac4dec_output_stage_process,	49.5,	51.3,	49.4,	51.4,	49.8,	51.2,	48.8,	51.3,	49.5,	51.3,	48.9,	51.4,	48.9,	51.2,	49.1,	51.8,	49.6,	51.3,	48.7,	51.1,	
+ac4dec_output_stage_process,	48.1,	50.4,	48.6,	50.4,	49.1,	50.2,	48.5,	50.8,	48.4,	50.4,	48.1,	50.1,	48.5,	51.0,	48.0,	50.2,	48.1,	50.1,	48.8,	50.6,	
+apply_acpldec,	0.2,	7.9,	0.1,	8.0,	0.2,	8.2,	0.2,	8.1,	0.2,	8.0,	0.1,	8.2,	0.2,	8.0,	0.2,	8.4,	0.1,	8.0,	0.2,	7.9,	
+apply_acpldec,	0.1,	7.7,	0.2,	7.7,	0.1,	7.7,	0.1,	7.8,	0.1,	7.6,	0.2,	7.7,	0.2,	7.6,	0.1,	7.8,	0.1,	7.6,	0.1,	7.8,	
+dlb_ac4dec_input_stage_process_part_1,	13.5,	15.3,	13.3,	15.3,	13.5,	15.3,	13.5,	15.4,	13.6,	15.4,	13.3,	15.2,	13.6,	15.4,	13.6,	15.9,	13.4,	15.3,	13.3,	15.1,	
+dlb_ac4dec_input_stage_process_part_1,	13.2,	15.3,	13.5,	15.2,	13.2,	15.0,	13.4,	15.3,	13.3,	15.0,	13.3,	15.1,	13.4,	15.3,	13.3,	15.1,	13.2,	15.0,	13.3,	15.1,	
+dlb_ac4dec_input_stage_process_part_2,	0.1,	4.4,	0.1,	4.4,	0.1,	4.4,	0.1,	4.5,	0.1,	4.5,	0.1,	4.5,	0.1,	4.4,	0.1,	4.5,	0.1,	4.5,	0.1,	4.4,	
+dlb_ac4dec_input_stage_process_part_2,	0.1,	4.2,	0.1,	4.2,	0.1,	4.2,	0.1,	4.3,	0.1,	4.2,	0.1,	4.2,	0.1,	4.3,	0.1,	4.2,	0.1,	4.2,	0.1,	4.2,	
+pcm_process,	8.2,	9.2,	8.2,	9.3,	8.2,	9.1,	8.2,	9.3,	8.3,	9.3,	8.2,	9.2,	8.2,	9.2,	8.2,	9.2,	8.2,	9.2,	8.2,	9.3,	
+pcm_process,	8.1,	9.1,	8.1,	9.1,	8.1,	9.0,	8.1,	9.1,	8.1,	9.1,	8.0,	8.9,	8.2,	9.3,	8.1,	9.0,	8.0,	8.9,	8.1,	9.1,	
+log_0 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_0.log
+log_1 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_1.log
+log_2 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_2.log
+log_3 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_3.log
+log_4 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_4.log
+log_5 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_5.log
+log_6 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_6.log
+log_7 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_7.log
+log_8 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_8.log
+log_9 ==> ./profile_reports_linux_pandaboard_cortex_a9_ac4dec_test_armv7int_neon_dlb_profile_ref/test_em_001_200_b48_f13_aspx_acpl1_dap_on_9.log

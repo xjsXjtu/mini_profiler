@@ -1,0 +1,1 @@
+../frontend/run.py -c ac4_001 -d linux_pandaboard_cortex_a9 -e ./ac4dec_mp.cortex_a9.bin
