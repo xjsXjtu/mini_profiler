@@ -1,5 +1,5 @@
 0. Overview
-    ----
+----
     This is a light-weight profiler and related automatic tool.
     
     It's designed to:
@@ -13,7 +13,7 @@
         - easy to deploy automatic profiling
 
 1. Components
-    ----
+----
     mini_profiler: 
         
         This is the core profiler based on timer functions. 
@@ -34,7 +34,7 @@
         
     
 2. Platform Coverage
-    ----
+----
     mini_profiler
         
         - H/W: ARM, x86/x64
@@ -52,7 +52,7 @@
             Linux, Android, Windows
 
 3. Test Coverage
-    ----
+----
     Only small part of platforms has been tested for the time being. 
 
     mini_profiler
@@ -68,7 +68,7 @@
         - Target device: Linux, Android
         
 4. Future works
-    ----
+----
     - Improve test coverage, and deploy automatically
     
     - Implement multi-branch tree with son-brother way, so as to improve D-Cache.  
