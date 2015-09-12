@@ -69,9 +69,11 @@
         
 4. Future works
 ----
+    - Visualize the profiling results, probably like Valgrind. 
+    
     - Improve test coverage, and deploy automatically
     
-    - Implement multi-branch tree with son-brother way, so as to improve D-Cache.  
+    - Implement multi-branch tree in the son-brother way, so as to improve D-Cache.  
         
         
             
