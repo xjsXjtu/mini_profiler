@@ -323,12 +323,8 @@ void mp_report_and_close()
 {
     int i=0;
     mp_node *root = g_stack.s[0];
-	FILE *fp_log = NULL;
+    FILE *fp_log = NULL;
     
-#if 0
-    /* all non-leaf node should less his children's waste time */
-    mp_less_children_waste(root);
-#endif
     /* print report */
     fp_log = fopen("profile_report.log", "w");
     if(fp_log == NULL)

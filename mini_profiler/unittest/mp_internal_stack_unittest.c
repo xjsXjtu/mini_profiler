@@ -62,12 +62,12 @@ mp_bool test_mp_internal_stack_size()
             out = mp_true;
         }
     }
-	while(!mp_internal_stack_empty(stack))
-	{
-		int *p_data = (int*)mp_internal_stack_top(stack);
-		mp_internal_stack_pop(stack);
-		free(p_data);
-	}
+    while(!mp_internal_stack_empty(stack))
+    {
+        int *p_data = (int*)mp_internal_stack_top(stack);
+        mp_internal_stack_pop(stack);
+        free(p_data);
+    }
     mp_internal_stack_destroy(stack);
     return out;
 }
@@ -84,15 +84,15 @@ mp_bool test_mp_internal_stack_push_top_pop()
     p_data = (int*)malloc(sizeof(int));    *p_data = 2;
     mp_internal_stack_push(stack, p_data);
 
-	p_data = (int*)mp_internal_stack_top(stack);
-	mp_internal_stack_pop(stack);
-	free(p_data);
+    p_data = (int*)mp_internal_stack_top(stack);
+    mp_internal_stack_pop(stack);
+    free(p_data);
     
-	p_data = (int*)malloc(sizeof(int));    *p_data = 3;
+    p_data = (int*)malloc(sizeof(int));    *p_data = 3;
     mp_internal_stack_push(stack, p_data);
     
-	p_data = (int*)mp_internal_stack_top(stack);
-	if( *p_data == 3
+    p_data = (int*)mp_internal_stack_top(stack);
+    if( *p_data == 3
         && (mp_internal_stack_pop(stack), free(p_data), *(int*)(mp_internal_stack_top(stack)) == 1)
        )
     {
@@ -102,12 +102,12 @@ mp_bool test_mp_internal_stack_push_top_pop()
     {
         out = mp_false;
     }
-	while(!mp_internal_stack_empty(stack))
-	{
-		p_data = (int*)mp_internal_stack_top(stack);
-		mp_internal_stack_pop(stack);
-		free(p_data);
-	}
+    while(!mp_internal_stack_empty(stack))
+    {
+        p_data = (int*)mp_internal_stack_top(stack);
+        mp_internal_stack_pop(stack);
+        free(p_data);
+    }
     mp_internal_stack_destroy(stack);
     return out;
 }
@@ -135,12 +135,12 @@ mp_bool test_mp_internal_stack_empty()
             out = mp_true;
         }
     }
-	while(!mp_internal_stack_empty(stack))
-	{
-		int *p_data = (int*)mp_internal_stack_top(stack);
-		mp_internal_stack_pop(stack);
-		free(p_data);
-	}
+    while(!mp_internal_stack_empty(stack))
+    {
+        int *p_data = (int*)mp_internal_stack_top(stack);
+        mp_internal_stack_pop(stack);
+        free(p_data);
+    }
     mp_internal_stack_destroy(stack);
     return out;
 }
@@ -149,7 +149,7 @@ mp_bool test_mp_internal_stack_empty()
 static
 mp_bool test_mp_internal_stack_destroy()
 {
-	mp_internal_stack_t* stack = mp_internal_stack_create();
+    mp_internal_stack_t* stack = mp_internal_stack_create();
     int *p_data = NULL;
     
     p_data = (int*)malloc(sizeof(int));    *p_data = 1;
@@ -157,12 +157,12 @@ mp_bool test_mp_internal_stack_destroy()
     p_data = (int*)malloc(sizeof(int));    *p_data = 2;
     mp_internal_stack_push(stack, p_data);
 
-	while(!mp_internal_stack_empty(stack))
-	{
-		p_data = (int*)mp_internal_stack_top(stack);
-		mp_internal_stack_pop(stack);
-		free(p_data);
-	}
+    while(!mp_internal_stack_empty(stack))
+    {
+        p_data = (int*)mp_internal_stack_top(stack);
+        mp_internal_stack_pop(stack);
+        free(p_data);
+    }
     mp_internal_stack_destroy(stack);
 
     return mp_true;

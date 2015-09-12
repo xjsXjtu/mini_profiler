@@ -13,7 +13,7 @@ int main()
     printf("Unittest passed: %d/%d\n", pass_num, total_num);
 
 #if defined(_MSC_VER)
-	system("pause");
+    system("pause");
 #endif
     return 0;
 }    

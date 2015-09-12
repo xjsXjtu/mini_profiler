@@ -44,7 +44,7 @@ mp_timer_t mp_less_children_waste(mp_node *parent)
     }
     else if(parent->son_num < 1)
     {
-		parent->actual_total = mp_timer_sub(parent->actual_total, parent->waste_total);
+        parent->actual_total = mp_timer_sub(parent->actual_total, parent->waste_total);
         return parent->waste_total;
     }
     else
@@ -78,7 +78,7 @@ mp_timer_t mp_less_children_waste(mp_node *parent)
     
     while(!mp_internal_stack_empty(stack))
     {
-		curr_snapshot = (snapshot_t*)mp_internal_stack_top(stack);
+        curr_snapshot = (snapshot_t*)mp_internal_stack_top(stack);
         mp_internal_stack_pop(stack);
         
         switch(curr_snapshot->stage)
@@ -93,7 +93,7 @@ mp_timer_t mp_less_children_waste(mp_node *parent)
             else if(curr_snapshot->mpn->son_num < 1)
             {
                 ret_val = curr_snapshot->mpn->waste_total;
-				curr_snapshot->mpn->actual_total = mp_timer_sub(curr_snapshot->mpn->actual_total, curr_snapshot->mpn->waste_total);
+                curr_snapshot->mpn->actual_total = mp_timer_sub(curr_snapshot->mpn->actual_total, curr_snapshot->mpn->waste_total);
                 free(curr_snapshot);
                 continue;
             }
@@ -103,7 +103,7 @@ mp_timer_t mp_less_children_waste(mp_node *parent)
                 mp_internal_stack_push(stack, curr_snapshot);
                 for(i=curr_snapshot->mpn->son_num-1; i>=0; i--)
                 {
-					next_snapshot = (snapshot_t*)malloc(sizeof(snapshot_t));
+                    next_snapshot = (snapshot_t*)malloc(sizeof(snapshot_t));
                     next_snapshot->mpn = curr_snapshot->mpn->child[i];
                     next_snapshot->stage = 0;
                     mp_internal_stack_push(stack, next_snapshot);
@@ -112,19 +112,19 @@ mp_timer_t mp_less_children_waste(mp_node *parent)
             }
             break;
         case 1:
-			mp_timer_clear(&ret_val);
-			for(i=curr_snapshot->mpn->son_num-1; i>=0; i--)
-			{
-				ret_val = mp_timer_add(curr_snapshot->mpn->child[i]->waste_total, ret_val);
-			}
-			curr_snapshot->mpn->waste_total = mp_timer_add(curr_snapshot->mpn->waste_total, ret_val);
-			curr_snapshot->mpn->actual_total = mp_timer_sub(curr_snapshot->mpn->actual_total, curr_snapshot->mpn->waste_total);
+            mp_timer_clear(&ret_val);
+            for(i=curr_snapshot->mpn->son_num-1; i>=0; i--)
+            {
+                ret_val = mp_timer_add(curr_snapshot->mpn->child[i]->waste_total, ret_val);
+            }
+            curr_snapshot->mpn->waste_total = mp_timer_add(curr_snapshot->mpn->waste_total, ret_val);
+            curr_snapshot->mpn->actual_total = mp_timer_sub(curr_snapshot->mpn->actual_total, curr_snapshot->mpn->waste_total);
             free(curr_snapshot);
             continue;
             break;
         }
     }
-	mp_internal_stack_destroy(stack);
+    mp_internal_stack_destroy(stack);
     return ret_val;
 #endif
 }
@@ -164,8 +164,8 @@ mp_bool test_mp_less_children_waste()
 {
     mp_node *p_root = (mp_node*)malloc(sizeof(mp_node));
     mp_node *p_parent = NULL, *p_curr = NULL;
-	mp_bool out = mp_false;
-	mp_timer_t actual_totle, waste_totle;
+    mp_bool out = mp_false;
+    mp_timer_t actual_totle, waste_totle;
     
     mp_node_init(p_root, "Root", NULL);
     mp_timer_set(&p_root->actual_total, 1000);
@@ -183,10 +183,10 @@ mp_bool test_mp_less_children_waste()
     
     mp_less_children_waste(p_root);
     
-    if(  (p_curr = p_root,					   mp_timer_set(&actual_totle, 972), mp_timer_set(&waste_totle, 28), (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
-      && (p_curr = p_root->child[0],		   mp_timer_set(&actual_totle, 198), mp_timer_set(&waste_totle, 2),  (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
-      && (p_curr = p_root->child[1],		   mp_timer_set(&actual_totle, 286), mp_timer_set(&waste_totle, 14), (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
-      && (p_curr = p_root->child[2],		   mp_timer_set(&actual_totle, 389), mp_timer_set(&waste_totle, 11), (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
+    if(  (p_curr = p_root,                       mp_timer_set(&actual_totle, 972), mp_timer_set(&waste_totle, 28), (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
+      && (p_curr = p_root->child[0],           mp_timer_set(&actual_totle, 198), mp_timer_set(&waste_totle, 2),  (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
+      && (p_curr = p_root->child[1],           mp_timer_set(&actual_totle, 286), mp_timer_set(&waste_totle, 14), (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
+      && (p_curr = p_root->child[2],           mp_timer_set(&actual_totle, 389), mp_timer_set(&waste_totle, 11), (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
       && (p_curr = p_root->child[1]->child[0], mp_timer_set(&actual_totle, 45),  mp_timer_set(&waste_totle, 5),  (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
       && (p_curr = p_root->child[1]->child[1], mp_timer_set(&actual_totle, 54),  mp_timer_set(&waste_totle, 6),  (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
       && (p_curr = p_root->child[2]->child[0], mp_timer_set(&actual_totle, 63),  mp_timer_set(&waste_totle, 7),  (mp_timer_eq(p_curr->actual_total, actual_totle) && mp_timer_eq(p_curr->waste_total, waste_totle)))
@@ -194,7 +194,7 @@ mp_bool test_mp_less_children_waste()
     {
         out = mp_true;
     }
-	mp_free(p_root);
+    mp_free(p_root);
     return out;
 }
 #endif

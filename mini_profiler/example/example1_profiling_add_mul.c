@@ -24,72 +24,72 @@ int main(void)
     int i=0;
     int l=0, loops = 500;
 
-	/* Setup Instrumentation */
+    /* Setup Instrumentation */
     DLB_INSTRUMENT_OPEN();
     
-	DLB_INSTRUMENT_ENTER_PUNIT("profiled_float");
+    DLB_INSTRUMENT_ENTER_PUNIT("profiled_float");
     for(l=0; l<loops; l++)
     {
         float *a = NULL;
         float *b = NULL;
 
-		DLB_INSTRUMENT_ENTER_PUNIT("malloc");
-		a = malloc(sizeof(float) * len);
-		b = malloc(sizeof(float) * len);
-		DLB_INSTRUMENT_LEAVE_PUNIT("malloc");
+        DLB_INSTRUMENT_ENTER_PUNIT("malloc");
+        a = malloc(sizeof(float) * len);
+        b = malloc(sizeof(float) * len);
+        DLB_INSTRUMENT_LEAVE_PUNIT("malloc");
 
-		DLB_INSTRUMENT_ENTER_PUNIT("init");
+        DLB_INSTRUMENT_ENTER_PUNIT("init");
         for(i=0; i<len; i++)
         {
             a[i] = (float)i;
             b[i] = (float)-2 * i;
         }
-		DLB_INSTRUMENT_LEAVE_PUNIT("init");
+        DLB_INSTRUMENT_LEAVE_PUNIT("init");
 
-		DLB_INSTRUMENT_ENTER_PUNIT("add_float");
+        DLB_INSTRUMENT_ENTER_PUNIT("add_float");
         add_float(a, b, len);
-		DLB_INSTRUMENT_LEAVE_PUNIT("add_float");
+        DLB_INSTRUMENT_LEAVE_PUNIT("add_float");
 
-		DLB_INSTRUMENT_ENTER_PUNIT("mul_float");
+        DLB_INSTRUMENT_ENTER_PUNIT("mul_float");
         mul_float(a, b, len);
-		DLB_INSTRUMENT_LEAVE_PUNIT("mul_float");
+        DLB_INSTRUMENT_LEAVE_PUNIT("mul_float");
         free(a);
         free(b);
     }
-	DLB_INSTRUMENT_LEAVE_PUNIT("profiled_float");
+    DLB_INSTRUMENT_LEAVE_PUNIT("profiled_float");
 
-	DLB_INSTRUMENT_ENTER_PUNIT("profiled_double");
+    DLB_INSTRUMENT_ENTER_PUNIT("profiled_double");
      for(l=0; l<loops; l++)
     {
-		double *a = NULL;
-		double *b = NULL;
+        double *a = NULL;
+        double *b = NULL;
 
-		DLB_INSTRUMENT_ENTER_PUNIT("malloc");
-		a = malloc(sizeof(double) * len);
-		b = malloc(sizeof(double) * len);
-		DLB_INSTRUMENT_LEAVE_PUNIT("malloc");
+        DLB_INSTRUMENT_ENTER_PUNIT("malloc");
+        a = malloc(sizeof(double) * len);
+        b = malloc(sizeof(double) * len);
+        DLB_INSTRUMENT_LEAVE_PUNIT("malloc");
 
-		DLB_INSTRUMENT_ENTER_PUNIT("init");
+        DLB_INSTRUMENT_ENTER_PUNIT("init");
         for(i=0; i<len; i++)
         {
             a[i] = (float)i;
             b[i] = (float)-2 * i;
         }
-		DLB_INSTRUMENT_LEAVE_PUNIT("init");
+        DLB_INSTRUMENT_LEAVE_PUNIT("init");
 
-		DLB_INSTRUMENT_ENTER_PUNIT("add_double");
+        DLB_INSTRUMENT_ENTER_PUNIT("add_double");
         add_double(a, b, len);
-		DLB_INSTRUMENT_LEAVE_PUNIT("add_double");
+        DLB_INSTRUMENT_LEAVE_PUNIT("add_double");
 
-		DLB_INSTRUMENT_ENTER_PUNIT("mul_double");
+        DLB_INSTRUMENT_ENTER_PUNIT("mul_double");
         mul_double(a, b, len);
-		DLB_INSTRUMENT_LEAVE_PUNIT("mul_double");
+        DLB_INSTRUMENT_LEAVE_PUNIT("mul_double");
         free(a);
         free(b);
     }
-	DLB_INSTRUMENT_LEAVE_PUNIT("profiled_double");
+    DLB_INSTRUMENT_LEAVE_PUNIT("profiled_double");
 
-	DLB_INSTRUMENT_REPORT();
+    DLB_INSTRUMENT_REPORT();
     DLB_INSTRUMENT_CLOSE();
      
     return 0;
